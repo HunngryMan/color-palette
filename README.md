@@ -1,5 +1,5 @@
 # color-palette
 
-##Tecnologìas usadas:  
-    ###BackEnd: Python Flask  
-    ###FrontEnd: React js 
+## Tecnologìas usadas:  
+    - BackEnd: Python Flask  
+    - F rontEnd: React js 
