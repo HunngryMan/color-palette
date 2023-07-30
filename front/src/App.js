@@ -1,26 +1,18 @@
-import logo from "./logo.svg";
-import NavBar from "./Components/NavBar/NavBar";
-import "./App.css";
+import { useState } from "react";
+import NavBar from "./Components/NavBar";
+import Home from "./Components/Home";
+import About from "./Components/About";
 
 function App() {
+  const [page, setPage] = useState("Home");
+  const changePage = (option) => {
+    setPage(option);
+  };
   return (
-    <div className="App">
-      <NavBar />
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ textAlign: "center" }}>
+      <NavBar changePage={changePage} />
+      {page === "Home" && <Home />}
+      {page === "About" && <About />}
     </div>
   );
 }
